@@ -14,9 +14,9 @@ const MAX_SIZE: usize = 4 * 1024 * 1024;
 // BufferPacketType allow the Buffer to know which packet protocol is writing.
 type BufferPacketType = u8;
 // RTPBufferPacket indicates the Buffer that is handling RTP packets
-const RTP_BUFFER_PACKET: BufferPacketType = 1;
+pub const RTP_BUFFER_PACKET: BufferPacketType = 1;
 // RTCPBufferPacket indicates the Buffer that is handling RTCP packets
-const RTCP_BUFFER_PACKET: BufferPacketType = 2;
+pub const RTCP_BUFFER_PACKET: BufferPacketType = 2;
 
 /// Buffer allows writing packets to an intermediate buffer, which can then be read form.
 /// This is verify similar to bytes.Buffer but avoids combining multiple writes into a single read.
